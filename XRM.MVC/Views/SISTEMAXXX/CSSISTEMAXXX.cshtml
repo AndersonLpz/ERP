@@ -1,0 +1,76 @@
+﻿@model IEnumerable<XRM.Application._2_ViewModels._20_Sistema.vmdSISTEMAXXX>
+
+@{
+    ViewBag.Title = "CSSISTEMAXXX";
+}
+
+@section styles{
+    <link href="~/Content/0_Sistema/SISTEMAXXX/cssSISTEMAXXX.css" rel="stylesheet" />
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TBSISMODULOX_NS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TBSISTEMAXXX_NM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TBSISTEMAXXX_DS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TBSISTEMAXXX_DT_CAD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TBSISTEMAXXX_DT_INA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TBSISTEMAXXX_VIEW)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TBSISTEMAXXX_CONTROLLER)
+        </th>
+        <th>
+            <div data-toggle="tooltip" data-placement="top" title="Incluir">
+                @Html.ActionLink(" ", "CRSISTEMAXXX", null, new { @class = "fas fa-sign-in-alt" })
+            </div>
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TBSISMODULOX_NS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TBSISTEMAXXX_NM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TBSISTEMAXXX_DS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TBSISTEMAXXX_DT_CAD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TBSISTEMAXXX_DT_INA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TBSISTEMAXXX_VIEW)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TBSISTEMAXXX_CONTROLLER)
+        </td>
+        <td>
+            <div data-toggle="tooltip" data-placement="top" title="Editar">
+                @Html.ActionLink(" ", "EDSISTEMAXXX", new { id = item.TBSISTEMAXXX_NS }, new { @class = "far fa-edit" })
+            </div>
+            <div data-toggle="tooltip" data-placement="top" title="Detalhes">
+                @Html.ActionLink(" ", "DTSISTEMAXXX", new { id = item.TBSISTEMAXXX_NS }, new { @class = "far fa-list-alt" })
+            </div>
+        </td>
+    </tr>
+    }
+
+</table>

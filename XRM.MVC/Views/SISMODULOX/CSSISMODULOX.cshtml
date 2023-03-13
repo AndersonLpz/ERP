@@ -1,0 +1,50 @@
+﻿@model IEnumerable<XRM.Application._2_ViewModels._20_Sistema.vmdSISMODULOX>
+
+@{
+    ViewBag.Title = "Modulo";
+}
+
+@section styles{
+    <link href="~/Content/0_Sistema/SISMODULOX/cssSISMODULOX.css" rel="stylesheet" />
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TBSISMODULOX_NM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TBSISMODULOX_DS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TBSISMODULOX_DT_CAD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TBSISMODULOX_DT_INA)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TBSISMODULOX_NM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TBSISMODULOX_DS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TBSISMODULOX_DT_CAD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TBSISMODULOX_DT_INA)
+        </td>
+        <td>
+            <div data-toggle="tooltip" data-placement="top" title="Editar">
+                @Html.ActionLink(" ", "DTSISMODULOX", new { id = item.TBSISMODULOX_NS }, new { @class = "far fa-list-alt" })
+            </div>
+        </td>
+    </tr>
+    }
+</table>

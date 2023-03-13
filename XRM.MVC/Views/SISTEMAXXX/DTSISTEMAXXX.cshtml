@@ -1,0 +1,61 @@
+﻿@model XRM.Application._2_ViewModels._20_Sistema.vmdSISTEMAXXX
+
+@{
+    ViewBag.Title = "DTSISTEMAXXX";
+}
+
+@section styles{
+    <link href="~/Content/0_Sistema/SISTEMAXXX/cssSISTEMAXXX.css" rel="stylesheet" />
+}
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TBSISTEMAXXX_NM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TBSISTEMAXXX_NM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TBSISTEMAXXX_DS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TBSISTEMAXXX_DS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TBSISTEMAXXX_VIEW)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TBSISTEMAXXX_VIEW)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TBSISTEMAXXX_CONTROLLER)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TBSISTEMAXXX_CONTROLLER)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TBSISMODULOX_NS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TBSISMODULOX_NS)
+        </dd>
+    </dl>
+</div>
+<p>
+    <div class="clsDtSistemaTooltip" data-toggle="tooltip" data-placement="top" title="Editar">
+        @Html.ActionLink(" ", "EDSISTEMAXXX", new { id = Model.TBSISTEMAXXX_NS }, new { @class = "far fa-edit" })
+    </div>
+    <div class="clsDtSistemaTooltip" data-toggle="tooltip" data-placement="top" title="Retornar">
+        @Html.ActionLink(" ", "CSSISTEMAXXX", null, new { @class = "fas fa-undo-alt" })
+    </div>
+</p>

@@ -1,0 +1,50 @@
+﻿@model XRM.Application._2_ViewModels._20_Sistema.vmdSISMODULOX
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+@section styles{
+    <link href="~/Content/0_Sistema/SISMODULOX/cssSISMODULOX.css" rel="stylesheet" />
+}
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TBSISMODULOX_NM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TBSISMODULOX_NM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TBSISMODULOX_DS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TBSISMODULOX_DS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TBSISMODULOX_DT_CAD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TBSISMODULOX_DT_CAD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TBSISMODULOX_DT_INA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TBSISMODULOX_DT_INA)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <div class="clsDtModuloTooltip" data-toggle="tooltip" data-placement="top" title="Retornar">
+        @Html.ActionLink(" ", "CSSISMODULOX", null, new { @class = "fas fa-undo-alt" })
+    </div>
+</p>

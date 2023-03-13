@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BD1309F3-B38A-4873-BA38-AD7ABB8637C1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XRM.Application</RootNamespace>
+    <AssemblyName>XRM.Application</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=6.2.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.6.2.1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="0_Interface\00_Sistema\iasSISDEPARTA.cs" />
+    <Compile Include="0_Interface\00_Sistema\iasSISEMPRESA.cs" />
+    <Compile Include="0_Interface\00_Sistema\iasSISMODULOX.cs" />
+    <Compile Include="0_Interface\00_Sistema\iasSISTEMAXXX.cs" />
+    <Compile Include="0_Interface\01_Cadastro\iasCADEMAILXX.cs" />
+    <Compile Include="0_Interface\01_Cadastro\iasCADENDEREC.cs" />
+    <Compile Include="0_Interface\01_Cadastro\iasCADTELEFON.cs" />
+    <Compile Include="0_Interface\01_Cadastro\iasCADTELEFTP.cs" />
+    <Compile Include="0_Interface\99_Global\IAppServiceBase.cs" />
+    <Compile Include="1_Service\10_Sistema\asvSISDEPARTA.cs" />
+    <Compile Include="1_Service\10_Sistema\asvSISEMPRESA.cs" />
+    <Compile Include="1_Service\10_Sistema\asvSISMODULOX.cs" />
+    <Compile Include="1_Service\10_Sistema\asvSISTEMAXXX.cs" />
+    <Compile Include="1_Service\11_Cadastro\asvCADEMAILXX.cs" />
+    <Compile Include="1_Service\11_Cadastro\asvCADENDEREC.cs" />
+    <Compile Include="1_Service\11_Cadastro\asvCADTELEFON.cs" />
+    <Compile Include="1_Service\11_Cadastro\asvCADTELEFTP.cs" />
+    <Compile Include="1_Service\99_Global\AppServiceBase.cs" />
+    <Compile Include="2_ViewModels\20_Sistema\vmdSISDEPARTA.cs" />
+    <Compile Include="2_ViewModels\20_Sistema\vmdSISEMPRESA.cs" />
+    <Compile Include="2_ViewModels\20_Sistema\vmdSISMODULOX.cs" />
+    <Compile Include="2_ViewModels\20_Sistema\vmdSISTEMAXXX.cs" />
+    <Compile Include="2_ViewModels\21_Cadastro\vmdCADEMAILXX.cs" />
+    <Compile Include="2_ViewModels\21_Cadastro\vmdCADENDEREC.cs" />
+    <Compile Include="2_ViewModels\21_Cadastro\vmdCADTELEFON.cs" />
+    <Compile Include="2_ViewModels\21_Cadastro\vmdCADTELEFTP.cs" />
+    <Compile Include="3_AutoMapper\AutoMapperConfig.cs" />
+    <Compile Include="3_AutoMapper\DomainToViewModelMappingProfile.cs" />
+    <Compile Include="3_AutoMapper\ViewModelToDomainMappingProfile.cs" />
+    <Compile Include="9_Geral\appGlobal.cs" />
+    <Compile Include="9_Geral\DecimalModelBinder.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XRM.Domain\Domain.csproj">
+      <Project>{f82d084e-dae5-453f-a957-a0ccd8a42c0b}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

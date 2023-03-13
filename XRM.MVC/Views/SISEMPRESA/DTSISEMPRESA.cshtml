@@ -1,0 +1,47 @@
+﻿@model XRM.Application._2_ViewModels._20_Sistema.vmdSISEMPRESA
+
+@{
+    ViewBag.Title = "Detalhe";
+}
+
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TBSISEMPRESA_NM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TBSISEMPRESA_NM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TBSISEMPRESA_NM_FANTASIA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TBSISEMPRESA_NM_FANTASIA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TBSISEMPRESA_DS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TBSISEMPRESA_DS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TBSISEMPRESA_CPF_CNPJ)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TBSISEMPRESA_CPF_CNPJ)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "EDSISEMPRESA", new { id = Model.TBSISEMPRESA_NS }) |
+    @Html.ActionLink("Back to List", "CSSISEMPRESA")
+</p>

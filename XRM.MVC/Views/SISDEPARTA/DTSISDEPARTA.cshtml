@@ -1,0 +1,42 @@
+﻿@model XRM.Application._2_ViewModels._20_Sistema.vmdSISDEPARTA
+
+@{
+    ViewBag.Title = "DTSISDEPARTA";
+}
+
+<h2>DTSISDEPARTA</h2>
+
+<div>
+    <h4>vmdSISDEPARTA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TBSISDEPARTA_NM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TBSISDEPARTA_NM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TBSISDEPARTA_DS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TBSISDEPARTA_DS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TBSISEMPRESA_NS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TBSISEMPRESA_NS)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "EDSISDEPARTA", new { id = Model.TBSISDEPARTA_NS }) |
+    @Html.ActionLink("Back to List", "CSSISDEPARTA")
+</p>

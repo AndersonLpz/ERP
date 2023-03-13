@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F991761B-A710-4388-A4CF-ED4BC7805981}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XRM.Infra.Data</RootNamespace>
+    <AssemblyName>XRM.Infra.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="0_Context\XRMContext.cs" />
+    <Compile Include="1_EntityConfig\10_Sistema\decAspNetRoles.cs" />
+    <Compile Include="1_EntityConfig\10_Sistema\decAspNetUserClaims.cs" />
+    <Compile Include="1_EntityConfig\10_Sistema\decAspNetUserLogins.cs" />
+    <Compile Include="1_EntityConfig\10_Sistema\decAspNetUserRoles.cs" />
+    <Compile Include="1_EntityConfig\10_Sistema\decAspNetUsers.cs" />
+    <Compile Include="1_EntityConfig\10_Sistema\decSISDEPARTA.cs" />
+    <Compile Include="1_EntityConfig\10_Sistema\decSISEMPRESA.cs" />
+    <Compile Include="1_EntityConfig\10_Sistema\decSISMODULOX.cs" />
+    <Compile Include="1_EntityConfig\10_Sistema\decSISTEMAXXX.cs" />
+    <Compile Include="1_EntityConfig\11_Cadastro\decCADCLIENTE.cs" />
+    <Compile Include="1_EntityConfig\11_Cadastro\decCADEMAILXX.cs" />
+    <Compile Include="1_EntityConfig\11_Cadastro\decCADENDEREC.cs" />
+    <Compile Include="1_EntityConfig\11_Cadastro\decCADTELEFON.cs" />
+    <Compile Include="1_EntityConfig\11_Cadastro\decCADTELEFTP.cs" />
+    <Compile Include="2_Repositories\20_Sistema\idrSISDEPARTA.cs" />
+    <Compile Include="2_Repositories\20_Sistema\idrSISEMPRESA.cs" />
+    <Compile Include="2_Repositories\20_Sistema\idrSISMODULOX.cs" />
+    <Compile Include="2_Repositories\20_Sistema\idrSISTEMAXXX.cs" />
+    <Compile Include="2_Repositories\21_Cadastro\idrCADEMAILXX.cs" />
+    <Compile Include="2_Repositories\21_Cadastro\idrCADENDEREC.cs" />
+    <Compile Include="2_Repositories\21_Cadastro\idrCADTELEFON.cs" />
+    <Compile Include="2_Repositories\99_Geral\RepositoryBase.cs" />
+    <Compile Include="Migrations\0_Sistema\mgtSISMODULOX.cs" />
+    <Compile Include="Migrations\0_Sistema\mgtSISTEMAXXX.cs" />
+    <Compile Include="Migrations\1_Cadastro\mgtCADTELEFTP.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="1_EntityConfig\12_Atendimento\" />
+    <Folder Include="1_EntityConfig\13_Financeiro\" />
+    <Folder Include="1_EntityConfig\14_Cobranca\" />
+    <Folder Include="1_EntityConfig\15_Discador\" />
+    <Folder Include="1_EntityConfig\16_Relatorio\" />
+    <Folder Include="1_EntityConfig\99_Geral\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XRM.Domain\Domain.csproj">
+      <Project>{f82d084e-dae5-453f-a957-a0ccd8a42c0b}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este projeto faz referência a pacotes do NuGet que não estão presentes neste computador. Use a Restauração de Pacotes do NuGet para baixá-los.  Para obter mais informações, consulte http://go.microsoft.com/fwlink/?LinkID=322105. O arquivo ausente é {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" />
+</Project>

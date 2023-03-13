@@ -1,0 +1,99 @@
+﻿@{
+    Layout = null;
+
+
+    XRM.Application._9_Geral.appGlobal mobjConfig = new XRM.Application._9_Geral.appGlobal();
+
+    try
+    {
+        //mobjGlobal.CarregarConfig(ref mobjConfig);
+    }
+    catch (Exception ex)
+    {
+        Exception lexcMensagem = ex;
+    }
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @RenderSection("styles", false)
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="navbar-header">
+            <i class="fab fa-connectdevelop"></i>
+            @Html.ActionLink("ERP", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+        </div>
+        <div class="collapse navbar-collapse flex-row-reverse" id="navbarNavDropdown">
+            @Html.Partial("_LoginPartial")
+        </div>
+    </nav>
+    <div class="main">
+        <aside>
+            <div id="sidebarMenu" class="sidebar fliph ">
+                <ul class="list-sidebar bg-defoult">
+                    <li id="lConfiguracao">
+                        <a id="aConfiguracao" data-toggle="collapse" data-target="#subMenuConfiguracao" class="collapsed active"> <i id="iConfiguracao" class="fas fa-cogs"></i> <span class="nav-label"> Configuração </span> <span class="fa fa-chevron-left pull-right"></span> </a>
+                        <ul class="sub-menu collapse" id="subMenuConfiguracao">
+                            <li>@Html.ActionLink("Departamento", "CSSISDEPARTA", "SISDEPARTA")</li>
+                            <li>@Html.ActionLink("Empresa", "CSSISEMPRESA", "SISEMPRESA")</li>
+                            <li>@Html.ActionLink("Modulo", "CSSISMODULOX", "SISMODULOX")</li>
+                            <li>@Html.ActionLink("Sistema", "CSSISTEMAXXX", "SISTEMAXXX")</li>
+                        </ul>
+                    </li>
+                    <li id="lAtendimento">
+                        <a id="aAtendimento" data-toggle="collapse" data-target="#subMenuAtendimento" class="collapsed active"> <i id="iAtendimento" class="far fa-id-card"></i> <span class="nav-label">Atendimento</span> <span class="fa fa-chevron-left pull-right"></span> </a>
+                        <ul class="sub-menu collapse" id="subMenuAtendimento">
+                            <li class="active"><a href="#">CSS3 Animation</a></li>
+                            <li><a href="#">General</a></li>
+                            <li><a href="#">Buttons</a></li>
+                        </ul>
+                    </li>
+                    <li id="lFinanceiro">
+                        <a id="aFinanceiro" data-toggle="collapse" data-target="#subMenuFinanceiro" class="collapsed active"> <i id="iFinanceiro" class="fas fa-money-check"></i> <span class="nav-label">Financeiro</span> <span class="fa fa-chevron-left pull-right"></span> </a>
+                        <ul class="sub-menu collapse" id="subMenuFinanceiro">
+                            <li class="active"><a href="#">CSS3 Animation</a></li>
+                            <li><a href="#">General</a></li>
+                            <li><a href="#">Buttons</a></li>
+                        </ul>
+                    </li>
+                    <li id="lCobranca">
+                        <a id="aCobranca" data-toggle="collapse" data-target="#subMenuCobranca" class="collapsed active"> <i id="iCobranca" class="fas fa-project-diagram"></i> <span class="nav-label">Cobranca</span> <span class="fa fa-chevron-left pull-right"></span> </a>
+                        <ul class="sub-menu collapse" id="subMenuCobranca">
+                            <li class="active"><a href="#">CSS3 Animation</a></li>
+                            <li><a href="#">General</a></li>
+                            <li><a href="#">Buttons</a></li>
+                        </ul>
+                    </li>
+                    <li id="lRelatorio">
+                        <a id="aRelatorio" data-toggle="collapse" data-target="#subMenuRelatorio" class="collapsed active"> <i id="iRelatorio" class="fa fa-bar-chart-o"></i> <span class="nav-label">Graphs</span> <span class="fa fa-chevron-left pull-right"></span> </a>
+                        <ul class="sub-menu collapse" id="subMenuRelatorio">
+                            <li class="active"><a href="#">CSS3 Animation</a></li>
+                            <li><a href="#">General</a></li>
+                            <li><a href="#">Buttons</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+    <div id="ctnBody" class="container body-content">
+        @RenderBody()
+
+
+    </div>
+    <script type="text/javascript">
+        var gstrGlobalPath = '@(Request.Url.AbsoluteUri.Replace(Request.Url.PathAndQuery,"") + Url.Content("~/"))';
+    </script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

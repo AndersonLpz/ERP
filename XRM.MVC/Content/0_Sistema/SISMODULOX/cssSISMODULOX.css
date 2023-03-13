@@ -1,0 +1,21 @@
+﻿
+td a {
+    color: #000;
+    text-decoration: none;
+}
+
+    td a:hover {
+        color: #808080;
+        text-decoration: none;
+    }
+
+
+#clsDtModuloTooltip a {
+    color: #000;
+    text-decoration: none;
+}
+
+    #clsDtModuloTooltip a:hover {
+        color: #808080;
+        text-decoration: none;
+    }

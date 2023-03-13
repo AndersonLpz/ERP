@@ -1,0 +1,54 @@
+﻿@model XRM.Infra.CrossCutting.Identity._2_Model.RegisterViewModel
+@{
+    Layout = "~/Views/Shared/_LoginStart.cshtml";
+    ViewBag.Title = "Registrar nova conta";
+}
+
+<div class="container">
+    <div class="row main">
+        <div class="main-login main-center">
+            @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form col-md-12 center-block", role = "form" }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary("", new { @class = "text-danger" })
+                <form class="form-horizontal" method="post" action="#">
+                    <div class="form-group">
+                        <label for="username" class="cols-sm-2 control-label">Username</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                                @Html.TextBoxFor(m => m.Email, new { @class = "form-control input-lg", @placeholder = "E-mail" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="cols-sm-2 control-label">Password</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                @Html.PasswordFor(m => m.Password, new { @class = "form-control input-lg", @placeholder = "Senha" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control input-lg", @placeholder = "Confirmação da senha" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <button type="submit" class="btn btn-primary btn-lg btn-block login-button">Registrar</button>
+                    </div>
+                    <span><p>@Html.ActionLink("Agora não, obrigado!", "Login")</p></span>
+                </form>
+            }
+        </div>
+    </div>
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+

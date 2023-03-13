@@ -1,0 +1,50 @@
+﻿
+td a {
+    color: #000;
+    text-decoration: none;
+}
+
+    td a:hover {
+        color: #808080;
+        text-decoration: none;
+    }
+
+td div {
+    display:inline;
+}
+
+p a {
+    color: #000;
+    text-decoration: none;
+}
+
+    p a:hover {
+        color: #808080;
+        text-decoration: none;
+    }
+
+.clsDtSistemaTooltip {
+    display: inline;
+}
+
+
+
+th a {
+    color: #000;
+    text-decoration: none;
+}
+
+    th a:hover {
+        color: #808080;
+        text-decoration: none;
+    }
+
+div a {
+    color: #000;
+    text-decoration: none;
+}
+
+    div a:hover {
+        color: #808080;
+        text-decoration: none;
+    }

@@ -1,0 +1,42 @@
+﻿@model IEnumerable<XRM.Application._2_ViewModels._20_Sistema.vmdSISDEPARTA>
+
+@{
+    ViewBag.Title = "CSSISDEPARTA";
+}
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TBSISDEPARTA_NM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TBSISDEPARTA_DS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TBSISEMPRESA_NS)
+        </th>
+        <th>
+            @Html.ActionLink("Incluir", "CRSISDEPARTA")
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TBSISDEPARTA_NM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TBSISDEPARTA_DS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TBSISEMPRESA_NS)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EDSISDEPARTA", new { id=item.TBSISDEPARTA_NS }) |
+            @Html.ActionLink("Details", "DTSISDEPARTA", new { id=item.TBSISDEPARTA_NS }) |
+        </td>
+    </tr>
+}
+
+</table>

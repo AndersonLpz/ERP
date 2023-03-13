@@ -1,0 +1,58 @@
+﻿@model IEnumerable<XRM.Application._2_ViewModels._20_Sistema.vmdSISEMPRESA>
+
+@{
+    ViewBag.Title = "Consulta";
+}
+
+@section styles{
+    <link href="~/Content/0_Sistema/SISEMPRESA/cssSISEMPRESA.css" rel="stylesheet" />
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TBSISEMPRESA_NM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TBSISEMPRESA_NM_FANTASIA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TBSISEMPRESA_DS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TBSISEMPRESA_CPF_CNPJ)
+        </th>
+        <th>
+            <div data-toggle="tooltip" data-placement="top" title="Incluir">
+                @Html.ActionLink(" ", "CRSISEMPRESA", null, new { @class = "fas fa-sign-in-alt" })
+            </div>
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TBSISEMPRESA_NM)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TBSISEMPRESA_NM_FANTASIA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TBSISEMPRESA_DS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TBSISEMPRESA_CPF_CNPJ)
+            </td>
+            <td>
+                <div data-toggle="tooltip" data-placement="top" title="Editar">
+                    @Html.ActionLink(" ", "EDSISEMPRESA", new { id = item.TBSISEMPRESA_NS }, new { @class = "far fa-edit" })
+                </div>
+                <div data-toggle="tooltip" data-placement="top" title="Detalhes">
+                    @Html.ActionLink(" ", "DTSISEMPRESA", new { id = item.TBSISEMPRESA_NS }, new { @class = "far fa-list-alt" })
+                </div>
+            </td>
+        </tr>
+    }
+
+</table>

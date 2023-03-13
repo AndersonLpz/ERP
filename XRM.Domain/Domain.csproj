@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F82D084E-DAE5-453F-A957-A0CCD8A42C0B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XRM.Domain</RootNamespace>
+    <AssemblyName>XRM.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="0_Entities\00_Sistema\TBAspNetRoles.cs" />
+    <Compile Include="0_Entities\00_Sistema\TBAspNetUserClaims.cs" />
+    <Compile Include="0_Entities\00_Sistema\TBAspNetUserLogins.cs" />
+    <Compile Include="0_Entities\00_Sistema\TBAspNetUserRoles.cs" />
+    <Compile Include="0_Entities\00_Sistema\TBAspNetUsers.cs" />
+    <Compile Include="0_Entities\00_Sistema\TBSISDEPARTA.cs" />
+    <Compile Include="0_Entities\00_Sistema\TBSISEMPRESA.cs" />
+    <Compile Include="0_Entities\00_Sistema\TBSISEQUIPEX_NS.cs" />
+    <Compile Include="0_Entities\00_Sistema\TBSISIDEUSER.cs" />
+    <Compile Include="0_Entities\00_Sistema\TBSISMENUXXX.cs" />
+    <Compile Include="0_Entities\00_Sistema\TBSISMODULOX.cs" />
+    <Compile Include="0_Entities\00_Sistema\TBSISTEMAXXX.cs" />
+    <Compile Include="0_Entities\00_Sistema\TBSISUSPEMOD.cs" />
+    <Compile Include="0_Entities\00_Sistema\TBSISUSUARIO.cs" />
+    <Compile Include="0_Entities\00_Sistema\TBSISUSUPERF.cs" />
+    <Compile Include="0_Entities\01_Cadastro\TBCADCALCULO.cs" />
+    <Compile Include="0_Entities\01_Cadastro\TBCADCALTIPO.cs" />
+    <Compile Include="0_Entities\01_Cadastro\TBCADCEDENTE.cs" />
+    <Compile Include="0_Entities\01_Cadastro\TBCADCLIECED.cs" />
+    <Compile Include="0_Entities\01_Cadastro\TBCADCLIENTE.cs" />
+    <Compile Include="0_Entities\01_Cadastro\TBCADEMAILXX.cs" />
+    <Compile Include="0_Entities\01_Cadastro\TBCADENDEREC.cs" />
+    <Compile Include="0_Entities\01_Cadastro\TBCADTELEFON.cs" />
+    <Compile Include="0_Entities\01_Cadastro\TBCADTELEFTP.cs" />
+    <Compile Include="0_Entities\04_Cobranca\TBCOBACAOCED.cs" />
+    <Compile Include="0_Entities\04_Cobranca\TBCOBACAOXXX.cs" />
+    <Compile Include="0_Entities\04_Cobranca\TBCOBACOPARC.cs" />
+    <Compile Include="0_Entities\04_Cobranca\TBCOBACORDOX.cs" />
+    <Compile Include="0_Entities\04_Cobranca\TBCOBCONTRAT.cs" />
+    <Compile Include="0_Entities\04_Cobranca\TBCOBDETALHE.cs" />
+    <Compile Include="0_Entities\04_Cobranca\TBCOBDETALTP.cs" />
+    <Compile Include="0_Entities\04_Cobranca\TBCOBDETTPCP.cs" />
+    <Compile Include="0_Entities\04_Cobranca\TBCOBDIVCALC.cs" />
+    <Compile Include="0_Entities\04_Cobranca\TBCOBDIVIDAX.cs" />
+    <Compile Include="0_Entities\04_Cobranca\TBCOBSTATUSX.cs" />
+    <Compile Include="1_Interfaces\10_Repositories\100_Sistema\dirSISDEPARTA.cs" />
+    <Compile Include="1_Interfaces\10_Repositories\100_Sistema\dirSISEMPRESA.cs" />
+    <Compile Include="1_Interfaces\10_Repositories\100_Sistema\dirSISMODULOX.cs" />
+    <Compile Include="1_Interfaces\10_Repositories\100_Sistema\dirSISTEMAXXX.cs" />
+    <Compile Include="1_Interfaces\10_Repositories\101_Cadastro\dirCADEMAILXX.cs" />
+    <Compile Include="1_Interfaces\10_Repositories\101_Cadastro\dirCADENDEREC.cs" />
+    <Compile Include="1_Interfaces\10_Repositories\101_Cadastro\dirCADTELEFON.cs" />
+    <Compile Include="1_Interfaces\10_Repositories\101_Cadastro\dirCADTELEFTP.cs" />
+    <Compile Include="1_Interfaces\10_Repositories\999_Geral\IRepositoryBase.cs" />
+    <Compile Include="1_Interfaces\11_Services\110_Sistema\disSISDEPARTA.cs" />
+    <Compile Include="1_Interfaces\11_Services\110_Sistema\disSISEMPRESA.cs" />
+    <Compile Include="1_Interfaces\11_Services\110_Sistema\disSISMODULOX.cs" />
+    <Compile Include="1_Interfaces\11_Services\110_Sistema\disSISTEMAXXX.cs" />
+    <Compile Include="1_Interfaces\11_Services\111_Cadastro\disCADEMAILXX.cs" />
+    <Compile Include="1_Interfaces\11_Services\111_Cadastro\disCADENDEREC.cs" />
+    <Compile Include="1_Interfaces\11_Services\111_Cadastro\disCADTELEFON.cs" />
+    <Compile Include="1_Interfaces\11_Services\111_Cadastro\disCADTELEFTP.cs" />
+    <Compile Include="1_Interfaces\11_Services\999_Global\IServiceBase.cs" />
+    <Compile Include="2_Services\20_Sistema\dsvSISDEPARTA.cs" />
+    <Compile Include="2_Services\20_Sistema\dsvSISEMPRESA.cs" />
+    <Compile Include="2_Services\20_Sistema\dsvSISMODULOX.cs" />
+    <Compile Include="2_Services\20_Sistema\dsvSISTEMAXXX.cs" />
+    <Compile Include="2_Services\21_Cadastro\dsvCADEMAILXX.cs" />
+    <Compile Include="2_Services\21_Cadastro\dsvCADENDEREC.cs" />
+    <Compile Include="2_Services\21_Cadastro\dsvCADTELEFON.cs" />
+    <Compile Include="2_Services\21_Cadastro\dsvCADTELEFTP.cs" />
+    <Compile Include="2_Services\99_Global\ServiceBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="0_Entities\02_Atendimento\" />
+    <Folder Include="0_Entities\03_Financeiro\" />
+    <Folder Include="0_Entities\05_Discador\" />
+    <Folder Include="0_Entities\06_Relatorio\" />
+    <Folder Include="0_Entities\99_Geral\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
